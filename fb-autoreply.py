@@ -65,7 +65,8 @@ class EchoBot(sleekxmpp.ClientXMPP):
                how it may be used.
     """
     if msg['type'] in ('chat', 'normal'):
-      msg.reply("Thanks for sending\n%(body)s" % msg).send()
+      if str(msg['from']) not in ('foo@chat.facebook.com', 'bar@chat.facebook.com'):
+        msg.reply("Automaattivastaus: En lue FB-viestejäni aktiivisesti.").send()
 
 
 if __name__ == '__main__':
