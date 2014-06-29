@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# running: nohup python fb-autoreply.py -d -j username@chat.facebook.com >/dev/null 2>&1
+
 import sys
 import logging
 import getpass
